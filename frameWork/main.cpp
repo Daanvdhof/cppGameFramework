@@ -16,7 +16,7 @@ HWND* NewWindow(unsigned int width, unsigned int height, std::string title)
 {
 	HWND newWindow;
 	CloseWindow(currentWindow);
-	int a;
+	int a  = 5;
 	RECT wr = { 0, 0, (long)width, (long)height };
 
 	AdjustWindowRect(&wr, windowStyle, FALSE);
