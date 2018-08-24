@@ -1,0 +1,10 @@
+#pragma once
+#include <windows.h>
+#include <windowsx.h>
+#include <string>
+#include "../Input/Keyboard.h"
+#include "../Input/Mouse.h"
+#include "../Graphics/Graphics.h"
+#include "../Graphics/Canvas.h"
+#include "../Entities/EntityList.h"
+#include "Game.h"

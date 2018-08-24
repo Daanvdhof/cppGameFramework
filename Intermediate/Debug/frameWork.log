@@ -1,0 +1,10 @@
+﻿  Game.cpp
+c:\users\dvandenhof\documents\cppgameframework\framework\game_code\game.cpp(34): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\dvandenhof\documents\cppgameframework\framework\game_code\game.cpp(69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\dvandenhof\documents\cppgameframework\framework\game_code\game.cpp(73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\dvandenhof\documents\cppgameframework\framework\game_code\game.cpp(77): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\dvandenhof\documents\cppgameframework\framework\game_code\game.cpp(81): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\dvandenhof\documents\cppgameframework\framework\game_code\game.cpp(93): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\dvandenhof\documents\cppgameframework\framework\game_code\game.cpp(101): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  frameWork.vcxproj -> C:\Users\dvandenhof\Documents\cppGameFramework\\Output\Debug\frameWork.exe
+  frameWork.vcxproj -> C:\Users\dvandenhof\Documents\cppGameFramework\\Output\Debug\frameWork.pdb (Partial PDB)

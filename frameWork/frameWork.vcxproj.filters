@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Input\Keyboard.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\Mouse.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Graphics.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_code\Game.cpp">
+      <Filter>Game_code</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_code\GameEvents.cpp">
+      <Filter>Game_code</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\oBase.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\oTest.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\DrawingFunctions.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Sprite.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\Bitmap.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Canvas.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h" />
+    <ClInclude Include="Input\Keyboard.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\Mouse.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Graphics.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_code\ForwardDeclarations.h">
+      <Filter>Game_code</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_code\Game.h">
+      <Filter>Game_code</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_code\GameIncludes.h">
+      <Filter>Game_code</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\EntityList.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\oBase.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\oTest.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Includes.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\ForwardDeclarations.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Sprite.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\Bitmap.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Canvas.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{616add63-8fbc-42ef-aaec-ed2d2ac6d7e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{8df5a3d1-4cd2-4217-85b1-e467e71e1eb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities">
+      <UniqueIdentifier>{84a1ec99-9d20-4ba2-844c-e57139b5d982}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game_code">
+      <UniqueIdentifier>{ef14c9ce-fa71-4bdf-9ca9-04b64e76b69e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Images">
+      <UniqueIdentifier>{a201c207-84a9-499f-9a57-f3571d66f2c3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Graphics\normalPxShader.hlsl">
+      <Filter>Graphics</Filter>
+    </FxCompile>
+    <FxCompile Include="Graphics\normalVxShader.hlsl">
+      <Filter>Graphics</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>
