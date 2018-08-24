@@ -44,8 +44,6 @@ public:
 	void DrawLine(int x1, int y1, int x2, int y2, Color c);
 	void DrawRectangle(int xTopLeft, int yTopLeft, int width, int height, Color c);
 	void FillRectangle(int xTopLeft, int yTopLeft, int width, int height, Color c);
-	bool wrapHorizontal = false;
-	bool wrapVertical = false;
 	void DrawBMP(int x, int y, int drawWidth, int drawHeight, std::string fileName); //Change so bmp is not read every time
 private:
 	Color* pixelBuffer = NULL;

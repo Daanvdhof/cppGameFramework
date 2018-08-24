@@ -2,5 +2,7 @@
 * text=auto
 Output/
 Intermediate/
+x64/
+framework/x64
 .vs/
 frameWork.VC.VC.opendb

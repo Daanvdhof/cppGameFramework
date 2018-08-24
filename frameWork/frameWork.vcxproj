@@ -101,7 +101,7 @@
     <FxCompile>
       <ShaderType>Pixel</ShaderType>
       <EntryPointName>NormalPS</EntryPointName>
-      <HeaderFileOutput>$(ProjectDir)%(Filename).shh</HeaderFileOutput>
+      <HeaderFileOutput>$(ProjectDir)Graphics/%(Filename).shh</HeaderFileOutput>
       <VariableName>extern %(Filename)Bytecode</VariableName>
     </FxCompile>
   </ItemDefinitionGroup>
@@ -141,7 +141,7 @@
     <FxCompile>
       <ShaderType>Pixel</ShaderType>
       <EntryPointName>NormalPS</EntryPointName>
-      <HeaderFileOutput>$(ProjectDir)%(Filename).shh</HeaderFileOutput>
+      <HeaderFileOutput>$(ProjectDir)Graphics/%(Filename).shh</HeaderFileOutput>
       <VariableName>extern %(Filename)Bytecode</VariableName>
     </FxCompile>
   </ItemDefinitionGroup>
@@ -180,6 +180,8 @@
     <FxCompile Include="Graphics\normalPxShader.hlsl">
       <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Graphics\%(Filename).shh</HeaderFileOutput>
       <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)Graphics\%(Filename).shh</HeaderFileOutput>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Graphics\%(Filename).shh</HeaderFileOutput>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)Graphics\%(Filename).shh</HeaderFileOutput>
     </FxCompile>
     <FxCompile Include="Graphics\normalVxShader.hlsl">
       <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NormalVS</EntryPointName>
@@ -188,6 +190,8 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
       <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Graphics\%(Filename).shh</HeaderFileOutput>
       <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)Graphics\%(Filename).shh</HeaderFileOutput>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Graphics\%(Filename).shh</HeaderFileOutput>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)Graphics\%(Filename).shh</HeaderFileOutput>
     </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

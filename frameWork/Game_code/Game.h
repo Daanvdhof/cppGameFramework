@@ -66,6 +66,7 @@ private:
 	float speed = 100.0f;	//Speed in pixels per second
 	float x = 400;
 	float y = 300;
+
 	Color* drawingColor = NULL;
 	oTest** otest1;
 	Canvas* cTest;

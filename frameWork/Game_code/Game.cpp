@@ -1,7 +1,7 @@
 #include <thread>
 #include <ctime>
 #include "GameIncludes.h"
-const int numObjects = 50;
+const int numObjects = 10;
 const int yCutoff = 800;
 Game::Game(HWND* hWnd, Keyboard* kbd, Mouse* ms)
 {
@@ -21,16 +21,12 @@ Game::Game(HWND* hWnd, Keyboard* kbd, Mouse* ms)
 	cBackGround->SetBackGroundColor(Color(0, 0, 255));
 	cTest = new Canvas(SCREEN_WIDTH/4, SCREEN_HEIGHT/4, pMyGfx);
 
-	cTest->SetPos(SCREEN_WIDTH / 4, SCREEN_HEIGHT / 4);
-	cTest->SetBackGroundColor(Color(255, 0, 0));
-	cTest->horizontalWrapping = true;
-	cTest->verticalWrapping = true;
 
-	cBackGround->horizontalWrapping = true;
-	cBackGround->verticalWrapping = true;
+	cTest->SetBackGroundColor(Color(255, 0, 0));
+
 	for (int i = 0; i < numObjects; i++)
 	{
-		otest1[i] = new oTest(this, cTest, 10, 10);
+		otest1[i] = new oTest(this, cTest, 20, 20);
 		otest1[i]->x = i*cTest->GetWidth() / numObjects;
 		otest1[i]->y = 200;
 		otest1[i]->depth = i;
@@ -105,31 +101,24 @@ void Game::Actions()
 }
 void Game::DrawScreen()
 {
-	if (seperateDrawingFromActions == false)
-	{
-		Actions();
-	}
-
-	pMyGfx->BeginFrame();
-	/*
-	for (int i = 0; i < SCREEN_WIDTH / 100; i++)
-	{
-		pMyGfx->DrawLine(100 * i, 0, 100 * i, SCREEN_HEIGHT, *drawingColor);
-	}
-	for (int i = 0; i < SCREEN_HEIGHT / 100; i++)
-	{
-		pMyGfx->DrawLine(0, 100 * i, SCREEN_WIDTH, 100 * i, *drawingColor);
-	}
-	*/
-	//pMyGfx->DrawCircle((int)x, (int)y, 30, *drawingColor);
 	
-	cBackGround->ClearCanvas();
-	for (int i = 0; i < numObjects; i++)
-	{
-		otest1[i]->Draw();
-	}
-	cBackGround->DrawToCanvas(cTest->GetX() , cTest->GetY(), cTest);
-	cBackGround->DrawToCanvas(cTest->GetX() + 400, cTest->GetY() + 200, cTest);
-	cBackGround->DrawCavas();
-	pMyGfx->EndFrame();
+		pMyGfx->BeginFrame();
+
+		cBackGround->ClearCanvas();
+		if (seperateDrawingFromActions == false)
+		{
+			Actions();
+		}
+		for (int i = 0; i < numObjects; i++)
+		{
+
+			otest1[i]->Draw();
+		}
+		cBackGround->DrawToCanvas(cTest->GetX(), cTest->GetY(), cTest);
+		cBackGround->DrawToCanvas(cTest->GetX() + 400, cTest->GetY() + 200, cTest);
+		cBackGround->DrawCavas();
+
+		pMyGfx->EndFrame();
+
+
 }

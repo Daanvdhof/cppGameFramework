@@ -5,14 +5,6 @@ void Graphics::DrawPixel(int x, int y, int r, int g, int b)
 }
 void  Graphics::DrawPixel(int x, int y, Color color)
 {
-	if ((x < 0 || x >= width) && wrapHorizontal == true)
-	{
-		x = abs(x % width);
-	}
-	if ((y < 0 || y >= height) && wrapVertical == true)
-	{
-		y = abs(y % height);
-	}
 	if (x >= 0 && y >= 0 && x < width && y < height)
 	{
 		long location = y*width + x;

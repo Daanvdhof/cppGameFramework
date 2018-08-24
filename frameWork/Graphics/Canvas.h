@@ -10,8 +10,10 @@ public:
 	Canvas(int width, int height, Graphics* gfx);
 	~Canvas();
 	void DrawToCanvas(int x, int y,int depth, Color c);
-	void DrawToCanvas(int x, int y, Canvas* canvas);
+	void DrawToCanvasWrapped(int x, int y, int depth, Color c);
 
+	void DrawToCanvas(int x, int y, Canvas* canvas);
+	void DrawToCanvasWrapped(int x, int y, Canvas* canvas);
 
 	void DrawCavas();
 	void SetPos(int x, int y) { this->x = x; this->y = y; }
@@ -25,8 +27,7 @@ public:
 	void SetBackGroundColor(Color c) { backGroundColor = c;}
 	int GetDepth(int x, int y) { if (x >= 0 && y >= 0 && x < canvasWidth && y < canvasHeight) { return minPixelDepth[x][y]; } else { return 127;}}
 	Color GetPixel(int x, int y) { if (x >= 0 && y >= 0 && x < canvasWidth && y < canvasHeight) { return pixels[x][y]; } else { return backGroundColor; } }
-	bool horizontalWrapping = false;
-	bool verticalWrapping = false;
+
 private:
 	int canvasWidth;
 	int canvasHeight;

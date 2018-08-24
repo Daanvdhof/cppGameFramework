@@ -19,16 +19,50 @@ Canvas::~Canvas()
 	delete[] pixels;
 
 }
-void Canvas::DrawToCanvas(int x, int y, int depth, Color c)
+void Canvas::DrawToCanvasWrapped(int x, int y, int depth, Color c)
 {
-	if ((x < 0 || x >= canvasWidth) && horizontalWrapping == true)
+	if ((x < 0 || x >= canvasWidth))
 	{
-		x = abs(x % canvasWidth);
+		if (x < 0)
+		{
+			x %= canvasWidth;
+			x += canvasWidth;
+		}
+		else
+		{
+			x = (x) % canvasWidth;
+		}
 	}
-	if ((y < 0 || y >= canvasHeight) && verticalWrapping == true)
+	if ((y < 0 || y >= canvasHeight))
 	{
-		y = abs(y % canvasHeight);
+		if (y < 0)
+		{
+			y %= canvasHeight;
+			y += canvasHeight;
+		}
+		else
+		{
+			y = y % canvasHeight;
+		}
 	}
+	DrawToCanvas(x, y, depth, c);
+}
+
+void Canvas::DrawToCanvasWrapped(int x, int y, Canvas* canvas)
+{
+	int canvasWidth = canvas->GetWidth();
+	int canvasHeight = canvas->GetHeight();
+
+	for (int i = 0; i < canvas->canvasWidth; i++)
+	{
+		for (int j = 0; j < canvas->canvasHeight; j++)
+		{
+			DrawToCanvasWrapped(x + i, y + j, canvas->GetDepth(i, j), canvas->GetPixel(i, j));
+		}
+	}
+}
+void Canvas::DrawToCanvas(int x, int y, int depth, Color c)
+{	
 	if (x >= 0 && y >= 0 && x < canvasWidth && y < canvasHeight)
 	{
 		int currentDepth = minPixelDepth[x][y];
@@ -41,9 +75,12 @@ void Canvas::DrawToCanvas(int x, int y, int depth, Color c)
 }
 void Canvas::DrawToCanvas(int x, int y, Canvas* canvas)
 {
-	for (int i = 0; i < canvas->GetWidth(); i++)
+	int canvasWidth = canvas->GetWidth();
+	int canvasHeight = canvas->GetHeight();
+
+	for (int i = 0; i < canvas->canvasWidth; i++)
 	{
-		for (int j = 0; j < canvas->GetHeight(); j++)
+		for (int j = 0; j < canvas->canvasHeight; j++)
 		{
 			DrawToCanvas(x + i, y + j, canvas->GetDepth(i, j), canvas->GetPixel(i, j));
 		}
